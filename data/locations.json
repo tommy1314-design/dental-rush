@@ -76,6 +76,11 @@
    ],
    "name": "牛肉麵店",
    "en": "Noodle Shop"
+  },
+  "meeting": {
+   "building": "國際會議中心",
+   "name": "國際會議中心",
+   "en": "開會"
   }
  }
 }
