@@ -14,6 +14,7 @@
 | 想做的事 | 改哪個檔案 |
 |---|---|
 | 新任務、改任務文字 | `src/missions.js` |
+| 二樓房間、NPC、支線任務 | `src/floor2.js` |
 | 任務地點換到別棟 | `data/locations.json`，再跑 `python3 tools/build_map.py` |
 | 新玩法、手感、美術 | `src/game.js` |
 | 標題畫面、說明文字 | `index.html` |
