@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-Hant"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>牙醫系狂飆</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+/* VOICE: rowdy campus caper, tongue-in-cheek
+   IDEA: a top-down open-world crime-caper map, but the "crimes" are being late for clinic
+   PICTURE: the live game canvas fills the screen
+   COLOUR and TYPE: asphalt grey, campus green, hospital-white coats, hot pink accent; Noto Sans TC 900
+   LAYOUT: full-bleed canvas, HUD in corners, overlays for title / busted */
+:root{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html,body{margin:0;height:100%;background:#15171b;overflow:hidden;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;touch-action:none;color:#fff}
+canvas{display:block}
+.ov{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 30%,rgba(255,46,136,.35),rgba(10,12,16,.92) 60%);z-index:5;padding:16px}
+.ov.hide{display:none}
+.card{max-width:560px;width:100%;text-align:center}
+.logo{font-weight:900;font-size:clamp(44px,11vw,84px);line-height:1;letter-spacing:.02em;transform:skew(-8deg);text-shadow:4px 4px 0 #ff2e88,8px 8px 0 #000}
+.sub{font-weight:700;font-size:clamp(15px,3.6vw,20px);margin:14px 0 22px;color:#ffd6e8}
+.keys{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;text-align:left;background:rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:14px 18px;font-size:15px;margin:0 auto 22px;max-width:420px}
+.keys b{color:#ff8fc0;white-space:nowrap}
+button{font:inherit;font-weight:900;font-size:20px;color:#111;background:#ffe14d;border:0;border-radius:12px;padding:14px 34px;min-height:48px;cursor:pointer;box-shadow:0 5px 0 #b38f00;transform:skew(-6deg)}
+button:active{transform:skew(-6deg) translateY(4px);box-shadow:0 1px 0 #b38f00}
+button:focus-visible{outline:3px solid #ff2e88;outline-offset:3px}
+.big{font-weight:900;font-size:clamp(36px,9vw,64px);color:#ff3b3b;text-shadow:3px 3px 0 #000;transform:skew(-6deg)}
+.note{font-size:13px;color:#aaa;margin-top:14px}
+</style></head><body>
+<canvas id="c"></canvas>
+<div class="ov" id="title"><div class="card">
+  <div class="logo">牙醫系狂飆</div>
+  <div class="sub">地圖：台大醫院牙科部（常德街1號）周邊 1 km｜送印模、接病人、躲總醫師</div>
+  <div class="keys">
+    <b>WASD／方向鍵</b><span>移動（手機：左半邊拖曳）</span>
+    <b>E</b><span>上下機車；站在 M 旁按 E 搭捷運（手機：右下按鈕）</span>
+    <b>任務</b><span>跟著粉紅箭頭，取件後在時限內送達</span>
+    <b>★ 教授關注</b><span>遲到或亂撞會加星，3 星以上總醫師會來抓你</span>
+    <b>🦷</b><span>全校藏了 32 顆牙，集滿全口有獎</span>
+  </div>
+  <button id="start">開始見習</button>
+  <div class="note">原創同人小遊戲，與台大官方無關・地圖資料 © OpenStreetMap contributors（ODbL）</div>
+</div></div>
+<div class="ov hide" id="busted"><div class="card">
+  <div class="big">被總醫師抓到了！</div>
+  <div class="sub" id="bustMsg">被抓去值大夜班……</div>
+  <button id="cont">早上了，繼續</button>
+</div></div>
+<script src="src/map.js"></script>
+<script src="src/missions.js"></script>
+<script src="src/game.js"></script>
+</body></html>

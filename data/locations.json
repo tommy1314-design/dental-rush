@@ -1,0 +1,81 @@
+{
+ "_說明": "building = OSM 建築名稱（完全相符）；沒有名稱的建築用 near_m = [東(m), 南(m)]，以牙科部為原點，挑最近的無名建築",
+ "locations": {
+  "dental": {
+   "building": "臺大牙醫學系",
+   "name": "牙醫學系・牙科部",
+   "en": "NTU School of Dentistry"
+  },
+  "lab": {
+   "building": "舊藥學館",
+   "name": "技工室（舊藥學館）",
+   "en": "Dental Lab"
+  },
+  "office": {
+   "building": "基礎醫學大樓",
+   "name": "研究室（基礎醫學大樓）",
+   "en": "Lab Office"
+  },
+  "hospE": {
+   "building": "臺大醫院東址",
+   "name": "台大醫院東址",
+   "en": "急診・病房"
+  },
+  "csr": {
+   "building": "手術大樓",
+   "name": "消毒供應（手術大樓）",
+   "en": "Sterilization"
+  },
+  "print": {
+   "building": "聯合教學館",
+   "name": "聯合教學館",
+   "en": "印論文"
+  },
+  "kids": {
+   "building": "臺大醫院兒童醫療大樓",
+   "name": "兒童醫療大樓",
+   "en": "Children's Hospital"
+  },
+  "dorm": {
+   "building": "台大男二舍",
+   "name": "台大男二舍",
+   "en": "Dorm"
+  },
+  "station": {
+   "building": "臺北車站",
+   "name": "台北車站",
+   "en": "Taipei Main Station"
+  },
+  "cram": {
+   "building": "日新商業補習班",
+   "name": "南陽街補習班",
+   "en": "Cram School"
+  },
+  "ximen": {
+   "building": "西門綜合商業大樓",
+   "name": "西門町",
+   "en": "Ximending"
+  },
+  "concert": {
+   "building": "國家音樂廳",
+   "name": "國家音樂廳",
+   "en": "Concert Hall"
+  },
+  "store": {
+   "near_m": [
+    -40,
+    -250
+   ],
+   "name": "便利商店",
+   "en": "Convenience"
+  },
+  "noodle": {
+   "near_m": [
+    650,
+    330
+   ],
+   "name": "牛肉麵店",
+   "en": "Noodle Shop"
+  }
+ }
+}
